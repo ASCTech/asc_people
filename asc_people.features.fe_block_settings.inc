@@ -10,6 +10,36 @@
 function asc_people_default_fe_block_settings() {
   $export = array();
 
+  $export['version'] = '1.0';
+
+  // Theme independent visibility settings.
+  $export['visibility'] = array(
+    'asc_taxonomy_filter-people_terms_1' => array(
+      'delta' => 'people_terms_1',
+      'module' => 'asc_taxonomy_filter',
+    ),
+    'asc_taxonomy_filter-people_terms_2' => array(
+      'delta' => 'people_terms_2',
+      'module' => 'asc_taxonomy_filter',
+    ),
+    'asc_taxonomy_filter-people_terms_3' => array(
+      'delta' => 'people_terms_3',
+      'module' => 'asc_taxonomy_filter',
+    ),
+    'views-asc_people-people_block_large' => array(
+      'delta' => 'asc_people-people_block_large',
+      'module' => 'views',
+    ),
+    'views-asc_people-people_block_list' => array(
+      'delta' => 'asc_people-people_block_list',
+      'module' => 'views',
+    ),
+    'views-asc_people-people_block_small' => array(
+      'delta' => 'asc_people-people_block_small',
+      'module' => 'views',
+    ),
+  );
+
   // q7
   $theme = array();
 
@@ -18,12 +48,20 @@ function asc_people_default_fe_block_settings() {
     'delta' => 'people_terms_1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '-28',
-    'region' => 'content',
+    'weight' => '0',
+    'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'people
-people/filters*',
+    'pages' => 'news
+news/filter*
+events
+events/filter*
+blog
+blog/filter*
+people
+people/filter*
+gallery
+gallery/filter*',
     'title' => '',
     'cache' => '1',
   );
@@ -37,8 +75,17 @@ people/filters*',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'people
-people/filters*',
+    'pages' => 'news
+news/filter*
+events
+events/filter*
+blog
+blog/filter*
+people
+people/filter*
+gallery
+gallery/filter*',
+    'title' => '',
     'cache' => '1',
   );
 
@@ -51,8 +98,17 @@ people/filters*',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'people
-people/filters*',
+    'pages' => 'news
+news/filter*
+events
+events/filter*
+blog
+blog/filter*
+people
+people/filter*
+gallery
+gallery/filter*',
+    'title' => '',
     'cache' => '1',
   );
 
@@ -61,8 +117,8 @@ people/filters*',
     'delta' => 'asc_people-people_block_large',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '-15',
-    'region' => 'postscript_second',
+    'weight' => '0',
+    'region' => 'preface_first',
     'custom' => '0',
     'visibility' => '1',
     'pages' => '<front>',
@@ -75,7 +131,7 @@ people/filters*',
     'delta' => 'asc_people-people_block_list',
     'theme' => 'q7',
     'status' => 0,
-    'weight' => '-13',
+    'weight' => '0',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
@@ -88,9 +144,9 @@ people/filters*',
     'module' => 'views',
     'delta' => 'asc_people-people_block_small',
     'theme' => 'q7',
-    'status' => 0,
-    'weight' => '-14',
-    'region' => '',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'preface_second',
     'custom' => '0',
     'visibility' => '1',
     'pages' => '<front>',
@@ -98,13 +154,13 @@ people/filters*',
     'cache' => -1,
   );
 
-  $export['q7'] = $theme;
+  $export['theme']['q7'] = $theme;
 
   $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();
   foreach ($export as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
-      unset($export[$theme_key]);
+      unset($export['theme'][$theme_key]);
     }
   }
   return $export;

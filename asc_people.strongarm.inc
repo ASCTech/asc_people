@@ -53,14 +53,32 @@ function asc_people_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_rotor_short' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_rotor_tall' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'front_quick_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '5',
         ),
       ),
       'display' => array(),

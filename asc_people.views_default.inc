@@ -10,7 +10,7 @@
 function asc_people_views_default_views() {
   $export = array();
 
-  $view = new view;
+  $view = new view();
   $view->name = 'asc_people';
   $view->description = 'Views for People Content Type';
   $view->tag = 'default';
@@ -37,88 +37,28 @@ function asc_people_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '7';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['label'] = 'No People';
-  $handler->display->display_options['empty']['area']['empty'] = FALSE;
   $handler->display->display_options['empty']['area']['content'] = 'Please check back for more people!';
   $handler->display->display_options['empty']['area']['format'] = 'html';
-  $handler->display->display_options['empty']['area']['tokenize'] = 0;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_people_image']['id'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['table'] = 'field_data_field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['field'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['label'] = '';
-  $handler->display->display_options['fields']['field_people_image']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_people_image']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_people_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_people_image']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['label'] = '';
-  $handler->display->display_options['fields']['changed']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['html'] = 0;
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['changed']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
@@ -144,26 +84,22 @@ function asc_people_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'asc_people' => 'asc_people',
   );
-  /* Filter criterion: Content: Promoted to front page */
-  $handler->display->display_options['filters']['promote']['id'] = 'promote';
-  $handler->display->display_options['filters']['promote']['table'] = 'node';
-  $handler->display->display_options['filters']['promote']['field'] = 'promote';
-  $handler->display->display_options['filters']['promote']['value'] = '1';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'people_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = 0;
-  $handler->display->display_options['row_options']['comments'] = 0;
+  $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -179,102 +115,63 @@ function asc_people_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'asc_people' => 'asc_people',
   );
-  $handler->display->display_options['path'] = 'people';
+  $handler->display->display_options['path'] = 'directory';
 
   /* Display: Small Feature */
   $handler = $view->new_display('block', 'Small Feature', 'people_block_small');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'features-list features';
   $handler->display->display_options['display_description'] = 'Feature with people listed vertically.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_people_image']['id'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['table'] = 'field_data_field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['field'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['label'] = '';
-  $handler->display->display_options['fields']['field_people_image']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_people_image']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_people_image']['settings'] = array(
-    'image_style' => 'people_tiny_thumb',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_people_image']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '50';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['label'] = '';
-  $handler->display->display_options['fields']['changed']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['html'] = 0;
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['changed']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
   $handler->display->display_options['fields']['changed']['custom_date_format'] = 'm/d/Y';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'asc_people' => 'asc_people',
+  );
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['block_description'] = 'People Feature Small';
 
   /* Display: Large Feature */
   $handler = $view->new_display('block', 'Large Feature', 'people_block_large');
   $handler->display->display_options['display_description'] = 'Large Feature for Front Page';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -283,120 +180,64 @@ function asc_people_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '2';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
-  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_people_image']['id'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['table'] = 'field_data_field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['field'] = 'field_people_image';
-  $handler->display->display_options['fields']['field_people_image']['label'] = '';
-  $handler->display->display_options['fields']['field_people_image']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_people_image']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_people_image']['settings'] = array(
-    'image_style' => 'people_front_thumb',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_people_image']['field_api_classes'] = 0;
+  /* Field: Content: Picture */
+  $handler->display->display_options['fields']['field_asc_people_picture']['id'] = 'field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['field'] = 'field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_picture']['type'] = 'opic_p100';
+  /* Field: Content: First Name */
+  $handler->display->display_options['fields']['field_asc_people_first_name']['id'] = 'field_asc_people_first_name';
+  $handler->display->display_options['fields']['field_asc_people_first_name']['table'] = 'field_data_field_asc_people_first_name';
+  $handler->display->display_options['fields']['field_asc_people_first_name']['field'] = 'field_asc_people_first_name';
+  $handler->display->display_options['fields']['field_asc_people_first_name']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_first_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_first_name']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '60';
-  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '60',
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_asc_people_first_name] [title]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'asc_people' => 'asc_people',
   );
-  $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
-  /* Field: Content: Updated date */
-  $handler->display->display_options['fields']['changed']['id'] = 'changed';
-  $handler->display->display_options['fields']['changed']['table'] = 'node';
-  $handler->display->display_options['fields']['changed']['field'] = 'changed';
-  $handler->display->display_options['fields']['changed']['label'] = '';
-  $handler->display->display_options['fields']['changed']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['changed']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['changed']['date_format'] = 'custom';
-  $handler->display->display_options['fields']['changed']['custom_date_format'] = 'm/d/Y';
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['block_description'] = 'People Feature Large';
 
   /* Display: Large Right Column */
   $handler = $view->new_display('attachment', 'Large Right Column', 'people_block_large_attachment');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['display_description'] = 'People List without pictures.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '2';
@@ -407,49 +248,37 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['label'] = '';
-  $handler->display->display_options['fields']['changed']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['html'] = 0;
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['changed']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'asc_people' => 'asc_people',
+  );
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = '1';
   $handler->display->display_options['displays'] = array(
     'people_block_large' => 'people_block_large',
     'default' => 0,
@@ -463,6 +292,7 @@ function asc_people_views_default_views() {
   $handler = $view->new_display('block', 'People List', 'people_block_list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['display_description'] = 'People list block for sidebar on people story page.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
@@ -470,88 +300,39 @@ function asc_people_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_people_image']['id'] = 'field_people_image';
   $handler->display->display_options['fields']['field_people_image']['table'] = 'field_data_field_people_image';
   $handler->display->display_options['fields']['field_people_image']['field'] = 'field_people_image';
   $handler->display->display_options['fields']['field_people_image']['label'] = '';
-  $handler->display->display_options['fields']['field_people_image']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['alter']['html'] = 0;
   $handler->display->display_options['fields']['field_people_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_people_image']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_people_image']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_people_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_people_image']['settings'] = array(
-    'image_style' => 'people_tiny_thumb',
-    'image_link' => '',
-  );
-  $handler->display->display_options['fields']['field_people_image']['field_api_classes'] = 0;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   /* Field: Content: Updated date */
   $handler->display->display_options['fields']['changed']['id'] = 'changed';
   $handler->display->display_options['fields']['changed']['table'] = 'node';
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['label'] = '';
-  $handler->display->display_options['fields']['changed']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['changed']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['changed']['alter']['html'] = 0;
   $handler->display->display_options['fields']['changed']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['changed']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['changed']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['changed']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['changed']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['changed']['date_format'] = 'date';
   $handler->display->display_options['block_description'] = 'People List';
 
   /* Display: Filters Page */
   $handler = $view->new_display('page', 'Filters Page', 'people_filters_page');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = 0;
-  $handler->display->display_options['row_options']['comments'] = 0;
+  $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -560,15 +341,11 @@ function asc_people_views_default_views() {
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['break_phrase'] = 1;
-  $handler->display->display_options['arguments']['tid']['add_table'] = 0;
-  $handler->display->display_options['arguments']['tid']['require_value'] = 0;
-  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = 0;
-  $handler->display->display_options['arguments']['tid']['set_breadcrumb'] = 0;
+  $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -584,7 +361,54 @@ function asc_people_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'asc_people' => 'asc_people',
   );
-  $handler->display->display_options['path'] = 'people/filters';
+  $handler->display->display_options['path'] = 'directory/filters';
+
+  /* Display: Bio Sidebar */
+  $handler = $view->new_display('block', 'Bio Sidebar', 'asc_bio_sidebar_block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Picture */
+  $handler->display->display_options['fields']['field_asc_people_picture']['id'] = 'field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['field'] = 'field_asc_people_picture';
+  $handler->display->display_options['fields']['field_asc_people_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture']['element_label_colon'] = FALSE;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_asc_people_email']['id'] = 'field_asc_people_email';
+  $handler->display->display_options['fields']['field_asc_people_email']['table'] = 'field_data_field_asc_people_email';
+  $handler->display->display_options['fields']['field_asc_people_email']['field'] = 'field_asc_people_email';
+  $handler->display->display_options['fields']['field_asc_people_email']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_email']['element_label_colon'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_asc_people_phone']['id'] = 'field_asc_people_phone';
+  $handler->display->display_options['fields']['field_asc_people_phone']['table'] = 'field_data_field_asc_people_phone';
+  $handler->display->display_options['fields']['field_asc_people_phone']['field'] = 'field_asc_people_phone';
+  $handler->display->display_options['fields']['field_asc_people_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_phone']['element_label_colon'] = FALSE;
+  /* Field: Content: Fax */
+  $handler->display->display_options['fields']['field_asc_people_fax']['id'] = 'field_asc_people_fax';
+  $handler->display->display_options['fields']['field_asc_people_fax']['table'] = 'field_data_field_asc_people_fax';
+  $handler->display->display_options['fields']['field_asc_people_fax']['field'] = 'field_asc_people_fax';
+  $handler->display->display_options['fields']['field_asc_people_fax']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_fax']['element_label_colon'] = FALSE;
+  /* Field: Content: Office Address */
+  $handler->display->display_options['fields']['field_asc_people_office_address']['id'] = 'field_asc_people_office_address';
+  $handler->display->display_options['fields']['field_asc_people_office_address']['table'] = 'field_data_field_asc_people_office_address';
+  $handler->display->display_options['fields']['field_asc_people_office_address']['field'] = 'field_asc_people_office_address';
+  $handler->display->display_options['fields']['field_asc_people_office_address']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_office_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $export['asc_people'] = $view;
 
   return $export;
