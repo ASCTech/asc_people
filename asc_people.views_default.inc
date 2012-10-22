@@ -366,7 +366,14 @@ function asc_people_views_default_views() {
   /* Display: Bio Sidebar */
   $handler = $view->new_display('block', 'Bio Sidebar', 'asc_bio_sidebar_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = '+';
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Picture */
@@ -399,6 +406,13 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_office_address']['field'] = 'field_asc_people_office_address';
   $handler->display->display_options['fields']['field_asc_people_office_address']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_office_address']['element_label_colon'] = FALSE;
+  /* Field: Content: Website Link */
+  $handler->display->display_options['fields']['field_asc_people_website_link']['id'] = 'field_asc_people_website_link';
+  $handler->display->display_options['fields']['field_asc_people_website_link']['table'] = 'field_data_field_asc_people_website_link';
+  $handler->display->display_options['fields']['field_asc_people_website_link']['field'] = 'field_asc_people_website_link';
+  $handler->display->display_options['fields']['field_asc_people_website_link']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_website_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_website_link']['click_sort_column'] = 'url';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';

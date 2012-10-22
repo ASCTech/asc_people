@@ -15,7 +15,7 @@ function asc_people_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'block_titlelink_views_asc_people-people_block_large';
   $strongarm->value = array(
-    'url' => 'people',
+    'url' => 'directory',
     'display' => 1,
     'title' => 'People Page',
   );
@@ -121,7 +121,7 @@ function asc_people_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_asc_people';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_asc_people'] = $strongarm;
 
   $strongarm = new stdClass();
