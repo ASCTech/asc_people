@@ -24,8 +24,8 @@ function asc_people_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'field_people_terms_1',
-      2 => 'field_asc_people_position',
+      1 => 'field_asc_people_position',
+      2 => 'field_people_terms_1',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

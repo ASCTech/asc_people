@@ -27,6 +27,10 @@ function asc_people_block_class_features_default_class() {
  */
 function asc_people_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -46,7 +50,7 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
   $custom_breadcrumbs_configs = array();
 
   $custom_breadcrumbs_configs[] = array(
-    'asc_people-1689872192' => array(),
+    'asc_people-1024830811' => array(),
   );
   return $custom_breadcrumbs_configs;
 }

@@ -51,6 +51,7 @@ features[field][] = node-asc_people-field_asc_people_website_link
 features[field][] = node-asc_people-field_people_terms_1
 features[field][] = node-asc_people-field_people_terms_2
 features[field][] = node-asc_people-field_people_terms_3
+features[field_group][] = group_asc_people_description|node|asc_people|default
 features[node][] = asc_people
 features[taxonomy][] = people_terms_1
 features[taxonomy][] = people_terms_2
