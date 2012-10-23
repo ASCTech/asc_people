@@ -61,7 +61,7 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
       'node_type' => 'asc_people',
       'language' => '',
     ),
-  };
+  );
   return $custom_breadcrumbs_configs;
 }
 
