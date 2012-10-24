@@ -50,17 +50,7 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
   $custom_breadcrumbs_configs = array();
 
   $custom_breadcrumbs_configs[] = array(
-    'asc_people' => array(
-      'name' => 'People',
-      'machine_name' => 'asc_person',
-      'titles' => 'People
-[node:field_asc_people_first_name] [node:title]',
-      'paths' => 'directory
-[node:url:path]',
-      'visibility_php' => '',
-      'node_type' => 'asc_people',
-      'language' => '',
-    ),
+    'asc_person' => array(),
   );
   return $custom_breadcrumbs_configs;
 }

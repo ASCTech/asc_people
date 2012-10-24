@@ -26,12 +26,15 @@ function asc_people_default_fe_block_settings() {
       'delta' => 'people_terms_3',
       'module' => 'asc_taxonomy_filter',
     ),
+    'views-30af6a75d77fa7425d6fce7809330acd' => array(
+      'delta' => '30af6a75d77fa7425d6fce7809330acd',
+      'module' => 'views',
+      'node_type' => array(
+        'asc_people' => TRUE,
+      ),
+    ),
     'views-asc_people-people_block_large' => array(
       'delta' => 'asc_people-people_block_large',
-      'module' => 'views',
-    ),
-    'views-asc_people-people_block_list' => array(
-      'delta' => 'asc_people-people_block_list',
       'module' => 'views',
     ),
     'views-asc_people-people_block_small' => array(
@@ -48,20 +51,11 @@ function asc_people_default_fe_block_settings() {
     'delta' => 'people_terms_1',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
-    'region' => 'sidebar',
+    'weight' => '-18',
+    'region' => 'content',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'news
-news/filter*
-events
-events/filter*
-blog
-blog/filter*
-people
-people/filter*
-gallery
-gallery/filter*',
+    'pages' => 'directory*',
     'title' => '',
     'cache' => '1',
   );
@@ -71,20 +65,11 @@ gallery/filter*',
     'delta' => 'people_terms_2',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
+    'weight' => '-18',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'news
-news/filter*
-events
-events/filter*
-blog
-blog/filter*
-people
-people/filter*
-gallery
-gallery/filter*',
+    'pages' => 'directory*',
     'title' => '',
     'cache' => '1',
   );
@@ -94,31 +79,22 @@ gallery/filter*',
     'delta' => 'people_terms_3',
     'theme' => 'q7',
     'status' => '1',
-    'weight' => '0',
+    'weight' => '-17',
     'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '1',
-    'pages' => 'news
-news/filter*
-events
-events/filter*
-blog
-blog/filter*
-people
-people/filter*
-gallery
-gallery/filter*',
+    'pages' => 'directory*',
     'title' => '',
     'cache' => '1',
   );
 
-  $theme['views-asc_people-people_block_large'] = array(
+  $theme['views-30af6a75d77fa7425d6fce7809330acd'] = array(
     'module' => 'views',
-    'delta' => 'asc_people-people_block_large',
+    'delta' => '30af6a75d77fa7425d6fce7809330acd',
     'theme' => 'q7',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
+    'status' => '1',
+    'weight' => '-13',
+    'region' => 'sidebar',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -126,9 +102,9 @@ gallery/filter*',
     'cache' => -1,
   );
 
-  $theme['views-asc_people-people_block_list'] = array(
+  $theme['views-asc_people-people_block_large'] = array(
     'module' => 'views',
-    'delta' => 'asc_people-people_block_list',
+    'delta' => 'asc_people-people_block_large',
     'theme' => 'q7',
     'status' => 0,
     'weight' => '0',
