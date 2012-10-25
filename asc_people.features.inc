@@ -54,7 +54,7 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
       'name' => 'People',
       'machine_name' => 'asc_person-1689872192',
       'titles' => 'People
-[node:title]',
+[node:field_asc_people_first_name] [node:title]',
       'paths' => 'directory
 [node:url:path]',
       'visibility_php' => '',
