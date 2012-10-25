@@ -58,11 +58,31 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
       'paths' => 'directory
 [node:url:path]',
       'visibility_php' => '',
-      'node_type' => 'asc_person',
       'language' => '',
     ),
   );
-  return $custom_breadcrumbs_configs;
+  return $custom_breadcrumbs_views_configs;
+}
+
+
+/**
+ * Implements hook_custom_breadcrumbs_views_config_features_default_settings().
+ */
+function asc_people_custom_breadcrumbs_views_config_features_default_settings() {
+  $custom_breadcrumbs_views_configs = array();
+
+  $custom_breadcrumbs_views_configs[] = array(
+    -1670042653 => array(
+      'name' => 'directory',
+      'machine_name' => '-1670042653',
+      'titles' => 'People',
+      'paths' => 'directory',
+      'visibility_php' => '',
+      'views_path' => 'directory',
+      'language' => '',
+    ),
+  );
+  return $custom_breadcrumbs_views_configs;
 }
 
 /**

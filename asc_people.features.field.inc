@@ -508,7 +508,7 @@ function asc_people_field_default_fields() {
       'bundle' => 'asc_people',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Enter a name.# to pull from the OPIC Service. If user does not have a picture with the service, you may upload one for them.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -913,6 +913,7 @@ function asc_people_field_default_fields() {
   t('Description');
   t('Education');
   t('Email');
+  t('Enter a name.# to pull from the OPIC Service. If user does not have a picture with the service, you may upload one for them.');
   t('Fax');
   t('First Name');
   t('Office Address');

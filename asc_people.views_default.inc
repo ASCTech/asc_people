@@ -100,7 +100,7 @@ function asc_people_views_default_views() {
     'field_asc_people_phone' => 'field_asc_people_phone',
     'field_asc_people_email' => 'field_asc_people_phone',
   );
-  $handler->display->display_options['style_options']['default'] = 'title';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'field_asc_people_picture' => array(
       'sortable' => 0,
@@ -236,7 +236,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Picture */
@@ -268,7 +268,20 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_position']['table'] = 'field_data_field_asc_people_position';
   $handler->display->display_options['fields']['field_asc_people_position']['field'] = 'field_asc_people_position';
   $handler->display->display_options['fields']['field_asc_people_position']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_position']['alter']['max_length'] = '25';
+  $handler->display->display_options['fields']['field_asc_people_position']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_position']['element_label_colon'] = FALSE;
+  /* Field: Content: Research Interests */
+  $handler->display->display_options['fields']['field_people_terms_2']['id'] = 'field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['table'] = 'field_data_field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['field'] = 'field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['label'] = '';
+  $handler->display->display_options['fields']['field_people_terms_2']['alter']['max_length'] = '15';
+  $handler->display->display_options['fields']['field_people_terms_2']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_people_terms_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_people_terms_2']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_people_terms_2']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_people_terms_2']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
@@ -302,13 +315,14 @@ function asc_people_views_default_views() {
   $handler->display->display_options['display_description'] = 'Large Feature for Front Page';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -340,11 +354,23 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Position */
-  $handler->display->display_options['fields']['field_asc_people_position']['id'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['table'] = 'field_data_field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['field'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['label'] = '';
-  $handler->display->display_options['fields']['field_asc_people_position']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_position_1']['id'] = 'field_asc_people_position_1';
+  $handler->display->display_options['fields']['field_asc_people_position_1']['table'] = 'field_data_field_asc_people_position';
+  $handler->display->display_options['fields']['field_asc_people_position_1']['field'] = 'field_asc_people_position';
+  $handler->display->display_options['fields']['field_asc_people_position_1']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['max_length'] = '15';
+  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_position_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Research Interests */
+  $handler->display->display_options['fields']['field_people_terms_2']['id'] = 'field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['table'] = 'field_data_field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['field'] = 'field_people_terms_2';
+  $handler->display->display_options['fields']['field_people_terms_2']['label'] = '';
+  $handler->display->display_options['fields']['field_people_terms_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_people_terms_2']['type'] = 'ds_taxonomy_separator';
+  $handler->display->display_options['fields']['field_people_terms_2']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_people_terms_2']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
