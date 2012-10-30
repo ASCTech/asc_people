@@ -592,7 +592,7 @@ function asc_people_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_asc_people_position',
       'label' => 'Position',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -751,7 +751,7 @@ function asc_people_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_people_terms_1',
       'label' => 'Appintments',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
