@@ -540,14 +540,14 @@ function asc_people_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-asc_people-field_asc_people_position'.
-  $fields['node-asc_people-field_asc_people_position'] = array(
+  // Exported field: 'node-asc_people-field_asc_people_title'.
+  $fields['node-asc_people-field_asc_people_title'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_asc_people_position',
+      'field_name' => 'field_asc_people_title',
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -590,8 +590,8 @@ function asc_people_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_asc_people_position',
-      'label' => 'Position',
+      'field_name' => 'field_asc_people_title',
+      'label' => 'Title',
       'required' => 1,
       'settings' => array(
         'text_processing' => '0',
@@ -920,7 +920,7 @@ function asc_people_field_default_fields() {
   t('People Terms 3');
   t('Phone');
   t('Picture');
-  t('Position');
+  t('Title');
   t('Research Interests');
   t('Website Link');
 

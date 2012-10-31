@@ -96,7 +96,7 @@ function asc_people_views_default_views() {
     'field_asc_people_picture' => 'field_asc_people_picture',
     'field_asc_people_first_name' => 'title',
     'title' => 'title',
-    'field_asc_people_position' => 'title',
+    'field_asc_people_title' => 'title',
     'field_asc_people_phone' => 'field_asc_people_phone',
     'field_asc_people_email' => 'field_asc_people_phone',
   );
@@ -123,7 +123,7 @@ function asc_people_views_default_views() {
       'separator' => '<br />',
       'empty_column' => 0,
     ),
-    'field_asc_people_position' => array(
+    'field_asc_people_title' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -174,12 +174,12 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Position */
-  $handler->display->display_options['fields']['field_asc_people_position']['id'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['table'] = 'field_data_field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['field'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['label'] = '';
-  $handler->display->display_options['fields']['field_asc_people_position']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['field_asc_people_title']['id'] = 'field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['table'] = 'field_data_field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['field'] = 'field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_title']['element_label_colon'] = FALSE;
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_asc_people_phone']['id'] = 'field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['table'] = 'field_data_field_asc_people_phone';
@@ -263,14 +263,14 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Position */
-  $handler->display->display_options['fields']['field_asc_people_position']['id'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['table'] = 'field_data_field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['field'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position']['label'] = '';
-  $handler->display->display_options['fields']['field_asc_people_position']['alter']['max_length'] = '25';
-  $handler->display->display_options['fields']['field_asc_people_position']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['field_asc_people_position']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['field_asc_people_title']['id'] = 'field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['table'] = 'field_data_field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['field'] = 'field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_title']['alter']['max_length'] = '25';
+  $handler->display->display_options['fields']['field_asc_people_title']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_title']['element_label_colon'] = FALSE;
   /* Field: Content: Research Interests */
   $handler->display->display_options['fields']['field_people_terms_2']['id'] = 'field_people_terms_2';
   $handler->display->display_options['fields']['field_people_terms_2']['table'] = 'field_data_field_people_terms_2';
@@ -353,15 +353,15 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Position */
-  $handler->display->display_options['fields']['field_asc_people_position_1']['id'] = 'field_asc_people_position_1';
-  $handler->display->display_options['fields']['field_asc_people_position_1']['table'] = 'field_data_field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position_1']['field'] = 'field_asc_people_position';
-  $handler->display->display_options['fields']['field_asc_people_position_1']['label'] = '';
-  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['max_length'] = '15';
-  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['field_asc_people_position_1']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['field_asc_people_position_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['field_asc_people_title_1']['id'] = 'field_asc_people_title_1';
+  $handler->display->display_options['fields']['field_asc_people_title_1']['table'] = 'field_data_field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title_1']['field'] = 'field_asc_people_title';
+  $handler->display->display_options['fields']['field_asc_people_title_1']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['max_length'] = '15';
+  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_title_1']['element_label_colon'] = FALSE;
   /* Field: Content: Research Interests */
   $handler->display->display_options['fields']['field_people_terms_2']['id'] = 'field_people_terms_2';
   $handler->display->display_options['fields']['field_people_terms_2']['table'] = 'field_data_field_people_terms_2';
