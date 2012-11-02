@@ -58,6 +58,7 @@ function asc_people_custom_breadcrumbs_config_features_default_settings() {
       'paths' => 'directory
 [node:url:path]',
       'visibility_php' => '',
+      'node_type' => 'asc_people',
       'language' => '',
     ),
   );
