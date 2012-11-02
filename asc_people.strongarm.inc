@@ -26,7 +26,7 @@ function asc_people_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'block_titlelink_views_asc_people-people_block_small';
   $strongarm->value = array(
-    'url' => 'people',
+    'url' => 'directory',
     'display' => 1,
     'title' => 'People Page',
   );
