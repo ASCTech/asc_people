@@ -580,7 +580,7 @@ function asc_people_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -735,11 +735,11 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'module' => 'ds',
           'settings' => array(
-            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_link' => FALSE,
             'taxonomy_term_separator' => ', ',
           ),
           'type' => 'ds_taxonomy_separator',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
