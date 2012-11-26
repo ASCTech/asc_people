@@ -430,30 +430,35 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_email']['field'] = 'field_asc_people_email';
   $handler->display->display_options['fields']['field_asc_people_email']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_email']['hide_empty'] = TRUE;
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_asc_people_phone']['id'] = 'field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['table'] = 'field_data_field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['field'] = 'field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_phone']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_phone']['hide_empty'] = TRUE;
   /* Field: Content: Fax */
   $handler->display->display_options['fields']['field_asc_people_fax']['id'] = 'field_asc_people_fax';
   $handler->display->display_options['fields']['field_asc_people_fax']['table'] = 'field_data_field_asc_people_fax';
   $handler->display->display_options['fields']['field_asc_people_fax']['field'] = 'field_asc_people_fax';
   $handler->display->display_options['fields']['field_asc_people_fax']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_fax']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_fax']['hide_empty'] = TRUE;
   /* Field: Content: Office Address */
   $handler->display->display_options['fields']['field_asc_people_office_address']['id'] = 'field_asc_people_office_address';
   $handler->display->display_options['fields']['field_asc_people_office_address']['table'] = 'field_data_field_asc_people_office_address';
   $handler->display->display_options['fields']['field_asc_people_office_address']['field'] = 'field_asc_people_office_address';
   $handler->display->display_options['fields']['field_asc_people_office_address']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_office_address']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_office_address']['hide_empty'] = TRUE;
   /* Field: Content: Website Link */
   $handler->display->display_options['fields']['field_asc_people_website_link']['id'] = 'field_asc_people_website_link';
   $handler->display->display_options['fields']['field_asc_people_website_link']['table'] = 'field_data_field_asc_people_website_link';
   $handler->display->display_options['fields']['field_asc_people_website_link']['field'] = 'field_asc_people_website_link';
   $handler->display->display_options['fields']['field_asc_people_website_link']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_website_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_website_link']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_website_link']['click_sort_column'] = 'url';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */

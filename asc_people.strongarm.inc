@@ -128,7 +128,7 @@ function asc_people_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_asc_people_pattern';
-  $strongarm->value = 'people/[node:title]';
+  $strongarm->value = 'people/[node:field_asc_people_picture]';
   $export['pathauto_node_asc_people_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -184,8 +184,8 @@ function asc_people_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'tvi_vocab_people_terms_3';
-  $strongarm->value = (object) array(
-    'is_default' => TRUE,
+  $strongarm->value = array(
+    'is_default' => FALSE,
     'type' => 'vocab',
     'xid' => 'people_terms_3',
     'view_name' => 'asc_people',

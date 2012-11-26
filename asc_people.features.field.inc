@@ -50,7 +50,7 @@ function asc_people_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -579,8 +579,8 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '1',
+          'type' => 'text_plain',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -733,13 +733,10 @@ function asc_people_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'ds',
-          'settings' => array(
-            'taxonomy_term_link' => FALSE,
-            'taxonomy_term_separator' => ', ',
-          ),
-          'type' => 'ds_taxonomy_separator',
-          'weight' => '2',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -920,8 +917,8 @@ function asc_people_field_default_fields() {
   t('People Terms 3');
   t('Phone');
   t('Picture');
-  t('Title');
   t('Research Interests');
+  t('Title');
   t('Website Link');
 
   return $fields;
