@@ -33,15 +33,8 @@ function asc_people_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '7';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '«';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹';
-  $handler->display->display_options['pager']['options']['tags']['next'] = '›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = '»';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['style_options']['columns'] = '1';
