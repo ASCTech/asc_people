@@ -135,14 +135,14 @@ function asc_people_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_people_terms_1_pattern';
-  $strongarm->value = 'directory/filter/[term:tid]';
+  $strongarm->value = 'directory/filters/[term:tid]';
   $export['pathauto_taxonomy_term_people_terms_1_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_people_terms_2_pattern';
-  $strongarm->value = 'directory/filter/[term:tid]';
+  $strongarm->value = 'directory/filters/[term:tid]';
   $export['pathauto_taxonomy_term_people_terms_2_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

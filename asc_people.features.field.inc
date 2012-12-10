@@ -316,7 +316,7 @@ function asc_people_field_default_fields() {
       'bundle' => 'asc_people',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'A fax number in (xxx) xxx-xxxx format.',
+      'description' => 'Format fax number as (555) 555-5555.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -518,7 +518,7 @@ function asc_people_field_default_fields() {
       'bundle' => 'asc_people',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'A phone number in (xxx) xxx-xxxx format.',
+      'description' => 'Format phone number as (555) 555-5555.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',

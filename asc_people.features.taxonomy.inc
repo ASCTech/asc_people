@@ -15,22 +15,7 @@ function asc_people_taxonomy_default_vocabularies() {
       'description' => 'University Appointments',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
+      'weight' => '-1',
     ),
     'people_terms_2' => array(
       'name' => 'Research Interests',
@@ -39,44 +24,14 @@ function asc_people_taxonomy_default_vocabularies() {
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
     ),
     'people_terms_3' => array(
-      'name' => 'People Terms 3',
+      'name' => 'Campus Location',
       'machine_name' => 'people_terms_3',
       'description' => 'Additional vocabulary for people.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
-      'rdf_mapping' => array(
-        'rdftype' => array(
-          0 => 'skos:ConceptScheme',
-        ),
-        'name' => array(
-          'predicates' => array(
-            0 => 'dc:title',
-          ),
-        ),
-        'description' => array(
-          'predicates' => array(
-            0 => 'rdfs:comment',
-          ),
-        ),
-      ),
+      'weight' => '1',
     ),
   );
 }
