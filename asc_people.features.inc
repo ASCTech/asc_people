@@ -40,7 +40,7 @@ function asc_people_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function asc_people_views_api() {
-  return array("api" => "3.0");
+  return array("version" => "3.0");
 }
 
 /**
