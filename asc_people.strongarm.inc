@@ -13,6 +13,27 @@ function asc_people_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_asc_people';
+  $strongarm->value = '1';
+  $export['ant_asc_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_asc_people';
+  $strongarm->value = '[node:field_asc_people_first_name] [node:field_asc_people_last_name]';
+  $export['ant_pattern_asc_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_asc_people';
+  $strongarm->value = 0;
+  $export['ant_php_asc_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'block_titlelink_views_asc_people-people_block_large';
   $strongarm->value = array(
     'url' => 'directory',
