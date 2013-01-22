@@ -96,7 +96,7 @@ function asc_people_default_fe_block_settings() {
     'weight' => '-29',
     'region' => 'sidebar',
     'custom' => '0',
-    'visibility' => '0',
+    'visibility' => '1',
     'pages' => '',
     'title' => '',
     'cache' => -1,
