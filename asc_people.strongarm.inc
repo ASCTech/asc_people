@@ -75,7 +75,7 @@ function asc_people_strongarm() {
         'custom_settings' => FALSE,
       ),
       'token' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'front_rotor_short' => array(
         'custom_settings' => FALSE,
@@ -151,6 +151,13 @@ function asc_people_strongarm() {
   $strongarm->name = 'pathauto_node_asc_people_pattern';
   $strongarm->value = 'people/[node:field_asc_people_picture]';
   $export['pathauto_node_asc_people_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_punctuation_period';
+  $strongarm->value = '2';
+  $export['pathauto_punctuation_period'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
