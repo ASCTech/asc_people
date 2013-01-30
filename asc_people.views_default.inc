@@ -452,7 +452,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_phone']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_phone']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_phone']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_asc_people_phone']['alter']['text'] = 'Phone: [field_asc_people_phone]';
+  $handler->display->display_options['fields']['field_asc_people_phone']['alter']['text'] = 'phone: [field_asc_people_phone]';
   $handler->display->display_options['fields']['field_asc_people_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_phone']['hide_empty'] = TRUE;
   /* Field: Content: Fax */
@@ -462,7 +462,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_fax']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_fax']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_fax']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_asc_people_fax']['alter']['text'] = 'Fax: [field_asc_people_fax]';
+  $handler->display->display_options['fields']['field_asc_people_fax']['alter']['text'] = 'fax: [field_asc_people_fax]';
   $handler->display->display_options['fields']['field_asc_people_fax']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_fax']['hide_empty'] = TRUE;
   /* Field: Global: Custom text */
