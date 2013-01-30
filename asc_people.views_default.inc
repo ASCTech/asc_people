@@ -449,12 +449,31 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_phone']['id'] = 'field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['table'] = 'field_data_field_asc_people_phone';
   $handler->display->display_options['fields']['field_asc_people_phone']['field'] = 'field_asc_people_phone';
+  $handler->display->display_options['fields']['field_asc_people_phone']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_phone']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_phone']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_phone']['alter']['text'] = 'Phone: [field_asc_people_phone]';
+  $handler->display->display_options['fields']['field_asc_people_phone']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_phone']['hide_empty'] = TRUE;
   /* Field: Content: Fax */
   $handler->display->display_options['fields']['field_asc_people_fax']['id'] = 'field_asc_people_fax';
   $handler->display->display_options['fields']['field_asc_people_fax']['table'] = 'field_data_field_asc_people_fax';
   $handler->display->display_options['fields']['field_asc_people_fax']['field'] = 'field_asc_people_fax';
+  $handler->display->display_options['fields']['field_asc_people_fax']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_fax']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_fax']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_fax']['alter']['text'] = 'Fax: [field_asc_people_fax]';
+  $handler->display->display_options['fields']['field_asc_people_fax']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_fax']['hide_empty'] = TRUE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_asc_people_phone]<br>
+[field_asc_people_fax]';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['hide_empty'] = TRUE;
   /* Field: Content: Office Address */
   $handler->display->display_options['fields']['field_asc_people_office_address']['id'] = 'field_asc_people_office_address';
   $handler->display->display_options['fields']['field_asc_people_office_address']['table'] = 'field_data_field_asc_people_office_address';
