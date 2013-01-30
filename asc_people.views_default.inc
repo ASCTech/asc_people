@@ -151,21 +151,6 @@ function asc_people_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['text'] = '<a class="[title_1]"></a>';
-  $handler->display->display_options['fields']['title_1']['alter']['max_length'] = '1';
-  $handler->display->display_options['fields']['title_1']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
   /* Field: Content: Picture */
   $handler->display->display_options['fields']['field_asc_people_picture']['id'] = 'field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
@@ -207,12 +192,25 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_email']['field'] = 'field_asc_people_email';
   $handler->display->display_options['fields']['field_asc_people_email']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_email']['element_label_colon'] = FALSE;
+  /* Field: Content: Last Name */
+  $handler->display->display_options['fields']['field_asc_people_last_name']['id'] = 'field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['table'] = 'field_data_field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['field'] = 'field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['alter']['max_length'] = '1';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['type'] = 'text_plain';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="[title_1]"></a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a class="[field_asc_people_last_name]"></a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
