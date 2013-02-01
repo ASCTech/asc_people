@@ -1103,9 +1103,9 @@ function asc_people_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'taxonomy',
+          'module' => 'asc_taxonomy_filter',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'asc_taxonomy_filter_term_reference_link',
           'weight' => '3',
         ),
         'teaser' => array(
