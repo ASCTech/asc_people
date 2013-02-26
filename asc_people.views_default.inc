@@ -287,7 +287,6 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '[field_asc_people_first_name] [title]';
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '50';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
@@ -362,25 +361,22 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_asc_people_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_first_name']['element_label_colon'] = FALSE;
+  /* Field: Content: Last Name */
+  $handler->display->display_options['fields']['field_asc_people_last_name']['id'] = 'field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['table'] = 'field_data_field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['field'] = 'field_asc_people_last_name';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_last_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_last_name']['type'] = 'text_plain';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_asc_people_first_name]<br>[title]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_asc_people_first_name]<br>[field_asc_people_last_name]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['field_asc_people_title_1']['id'] = 'field_asc_people_title_1';
-  $handler->display->display_options['fields']['field_asc_people_title_1']['table'] = 'field_data_field_asc_people_title';
-  $handler->display->display_options['fields']['field_asc_people_title_1']['field'] = 'field_asc_people_title';
-  $handler->display->display_options['fields']['field_asc_people_title_1']['label'] = '';
-  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['max_length'] = '21';
-  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['field_asc_people_title_1']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['field_asc_people_title_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
