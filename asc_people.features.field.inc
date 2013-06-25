@@ -68,11 +68,18 @@ function asc_people_field_default_fields() {
           'type' => 'text_summary_or_trimmed',
           'weight' => '1',
         ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '7',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
       'label' => 'Description',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'display_summary' => 0,
         'text_processing' => '1',
@@ -86,7 +93,83 @@ function asc_people_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '5',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_people-field_asc_areas_of_expertise'.
+  $fields['node-asc_people-field_asc_areas_of_expertise'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_asc_areas_of_expertise',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '60',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_people',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_asc_areas_of_expertise',
+      'label' => 'Areas of Expertise',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '13',
       ),
     ),
   );
@@ -131,13 +214,20 @@ function asc_people_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '5',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '4',
         ),
       ),
       'entity_type' => 'node',
@@ -155,7 +245,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '13',
+        'weight' => '15',
       ),
     ),
   );
@@ -186,7 +276,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -194,11 +284,17 @@ function asc_people_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'token' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_asc_people_email',
       'label' => 'Email',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -209,7 +305,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -247,19 +343,25 @@ function asc_people_field_default_fields() {
       'bundle' => 'asc_people',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Format fax number as (555) 555-5555.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
         ),
       ),
       'entity_type' => 'node',
@@ -274,10 +376,10 @@ function asc_people_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '11',
+          'size' => '15',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '10',
       ),
     ),
   );
@@ -321,13 +423,20 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
@@ -346,6 +455,81 @@ function asc_people_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '0',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_people-field_asc_people_last_name'.
+  $fields['node-asc_people-field_asc_people_last_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_asc_people_last_name',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_people',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_asc_people_last_name',
+      'label' => 'Last Name',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
       ),
     ),
   );
@@ -387,13 +571,19 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
         ),
       ),
       'entity_type' => 'node',
@@ -411,7 +601,7 @@ function asc_people_field_default_fields() {
           'rows' => '3',
         ),
         'type' => 'text_textarea',
-        'weight' => '10',
+        'weight' => '11',
       ),
     ),
   );
@@ -449,19 +639,25 @@ function asc_people_field_default_fields() {
       'bundle' => 'asc_people',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Format phone number as (555) 555-5555.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
         ),
       ),
       'entity_type' => 'node',
@@ -476,10 +672,10 @@ function asc_people_field_default_fields() {
         'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'size' => '11',
+          'size' => '14',
         ),
         'type' => 'text_textfield',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -514,13 +710,20 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'opic',
+          'settings' => array(),
+          'type' => 'name_n',
+          'weight' => '8',
         ),
       ),
       'entity_type' => 'node',
@@ -535,7 +738,7 @@ function asc_people_field_default_fields() {
         'module' => 'opic',
         'settings' => array(),
         'type' => 'opic_text',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -588,6 +791,13 @@ function asc_people_field_default_fields() {
           'type' => 'hidden',
           'weight' => 0,
         ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_plain',
+          'weight' => '3',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_asc_people_title',
@@ -604,7 +814,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -649,13 +859,19 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '10',
         ),
       ),
       'entity_type' => 'node',
@@ -686,7 +902,81 @@ function asc_people_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '11',
+        'weight' => '12',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-asc_people-field_opic_exists'.
+  $fields['node-asc_people-field_opic_exists'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_opic_exists',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '0',
+          1 => '1',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'asc_people',
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'token' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_opic_exists',
+      'label' => 'Display on Front Page',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '17',
       ),
     ),
   );
@@ -744,6 +1034,13 @@ function asc_people_field_default_fields() {
           'type' => 'hidden',
           'weight' => '5',
         ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_plain',
+          'weight' => '5',
+        ),
       ),
       'entity_type' => 'node',
       'field_name' => 'field_people_terms_1',
@@ -757,7 +1054,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -804,16 +1101,21 @@ function asc_people_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'type' => 'hidden',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '4',
+        ),
+        'token' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '9',
         ),
       ),
       'entity_type' => 'node',
@@ -828,7 +1130,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '12',
+        'weight' => '14',
       ),
     ),
   );
@@ -875,16 +1177,23 @@ function asc_people_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'taxonomy',
+          'module' => 'asc_taxonomy_filter',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'type' => 'asc_taxonomy_filter_term_reference_link',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
           'weight' => '2',
+        ),
+        'token' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'node',
@@ -899,7 +1208,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '14',
+        'weight' => '16',
       ),
     ),
   );
@@ -907,12 +1216,17 @@ function asc_people_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Appintments');
+  t('Areas of Expertise');
   t('Description');
+  t('Display on Front Page');
   t('Education');
   t('Email');
   t('Enter a name.# to pull from the OPIC Service. If user does not have a picture with the service, you may upload one for them.');
   t('Fax');
   t('First Name');
+  t('Format fax number as (555) 555-5555.');
+  t('Format phone number as (555) 555-5555.');
+  t('Last Name');
   t('Office Address');
   t('People Terms 3');
   t('Phone');

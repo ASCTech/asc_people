@@ -15,7 +15,7 @@ function asc_people_taxonomy_default_vocabularies() {
       'description' => 'University Appointments',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '-1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -56,12 +56,12 @@ function asc_people_taxonomy_default_vocabularies() {
       ),
     ),
     'people_terms_3' => array(
-      'name' => 'People Terms 3',
+      'name' => 'Campus Location',
       'machine_name' => 'people_terms_3',
       'description' => 'Additional vocabulary for people.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => '1',
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

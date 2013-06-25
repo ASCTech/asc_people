@@ -5,24 +5,6 @@
  */
 
 /**
- * Implements hook_block_class_features_default_class().
- */
-function asc_people_block_class_features_default_class() {
-  return array(
-    0 => array(
-      'module' => 'views',
-      'delta' => 'asc_people-people_block_large',
-      'css_classes' => 'feature-whole',
-    ),
-    1 => array(
-      'module' => 'views',
-      'delta' => 'asc_people-people_block_small',
-      'css_classes' => 'feature-half',
-    ),
-  );
-}
-
-/**
  * Implements hook_ctools_plugin_api().
  */
 function asc_people_ctools_plugin_api() {
