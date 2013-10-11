@@ -32,7 +32,44 @@ function asc_people_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'tid' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+    'tid_1' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'grid';
@@ -149,6 +186,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -233,6 +271,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['tid']['break_phrase'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['add_table'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -249,6 +288,68 @@ function asc_people_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'asc_people' => 'asc_people',
   );
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Appointment';
+  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    6 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['tid']['group_info']['label'] = 'Has taxonomy term';
+  $handler->display->display_options['filters']['tid']['group_info']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => array(),
+    ),
+    2 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => array(),
+    ),
+    3 => array(
+      'title' => '',
+      'operator' => 'or',
+      'value' => array(),
+    ),
+  );
+  $handler->display->display_options['filters']['tid']['reduce_duplicates'] = TRUE;
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'people_terms_1';
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
+  $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['tid_1']['expose']['operator_id'] = 'tid_1_op';
+  $handler->display->display_options['filters']['tid_1']['expose']['label'] = 'Research Interests';
+  $handler->display->display_options['filters']['tid_1']['expose']['operator'] = 'tid_1_op';
+  $handler->display->display_options['filters']['tid_1']['expose']['identifier'] = 'tid_1';
+  $handler->display->display_options['filters']['tid_1']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['tid_1']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    6 => 0,
+    7 => 0,
+  );
+  $handler->display->display_options['filters']['tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'people_terms_2';
   $handler->display->display_options['path'] = 'directory';
 
   /* Display: Small Feature */

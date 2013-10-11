@@ -96,10 +96,10 @@ function asc_people_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '2',
+          'weight' => '4',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
