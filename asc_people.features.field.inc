@@ -93,7 +93,7 @@ function asc_people_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '5',
+        'weight' => '8',
       ),
     ),
   );
@@ -169,7 +169,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '13',
+        'weight' => '20',
       ),
     ),
   );
@@ -245,7 +245,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '15',
+        'weight' => '22',
       ),
     ),
   );
@@ -276,7 +276,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '9',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -305,7 +305,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '8',
+        'weight' => '12',
       ),
     ),
   );
@@ -349,7 +349,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '11',
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -379,7 +379,7 @@ function asc_people_field_default_fields() {
           'size' => '15',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '16',
       ),
     ),
   );
@@ -423,7 +423,7 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '8',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -498,7 +498,7 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -529,7 +529,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -571,7 +571,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '12',
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -601,7 +601,7 @@ function asc_people_field_default_fields() {
           'rows' => '3',
         ),
         'type' => 'text_textarea',
-        'weight' => '11',
+        'weight' => '17',
       ),
     ),
   );
@@ -645,7 +645,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '10',
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -675,7 +675,7 @@ function asc_people_field_default_fields() {
           'size' => '14',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '14',
       ),
     ),
   );
@@ -710,7 +710,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '5',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -738,7 +738,7 @@ function asc_people_field_default_fields() {
         'module' => 'opic',
         'settings' => array(),
         'type' => 'opic_text',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -814,7 +814,7 @@ function asc_people_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '10',
       ),
     ),
   );
@@ -859,7 +859,7 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '7',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -902,7 +902,7 @@ function asc_people_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '12',
+        'weight' => '19',
       ),
     ),
   );
@@ -947,7 +947,7 @@ function asc_people_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '13',
+          'weight' => '21',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -976,7 +976,7 @@ function asc_people_field_default_fields() {
           'display_label' => 1,
         ),
         'type' => 'options_onoff',
-        'weight' => '17',
+        'weight' => '24',
       ),
     ),
   );
@@ -1054,7 +1054,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '4',
+        'weight' => '7',
       ),
     ),
   );
@@ -1103,7 +1103,7 @@ function asc_people_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1130,7 +1130,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '14',
+        'weight' => '21',
       ),
     ),
   );
@@ -1208,7 +1208,7 @@ function asc_people_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '16',
+        'weight' => '23',
       ),
     ),
   );
