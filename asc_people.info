@@ -17,6 +17,7 @@ dependencies[] = node
 dependencies[] = opic
 dependencies[] = strongarm
 dependencies[] = taxonomy
+dependencies[] = text
 dependencies[] = textformatter
 dependencies[] = views
 datestamp = 1359748637
