@@ -594,6 +594,37 @@ function asc_people_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['block_description'] = 'Bio Sidebar';
+  $translatables['asc_people'] = array(
+    t('Master'),
+    t('People'),
+    t('+'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Select any filter and click on Apply to see results'),
+    t('No People'),
+    t('Please check back for more people!'),
+    t('Page'),
+    t('more'),
+    t('<a class="[title_1]"></a>'),
+    t('[field_asc_people_first_name] [title]'),
+    t('All'),
+    t('Appointment'),
+    t('Has taxonomy term'),
+    t('Research Interests'),
+    t('Small Feature'),
+    t('Feature with people listed vertically.'),
+    t('People Feature Small'),
+    t('Large Feature'),
+    t('Large Feature for Front Page'),
+    t('[field_asc_people_first_name]<br>[field_asc_people_last_name]'),
+    t('People Feature Large'),
+    t('Bio Sidebar'),
+    t('Phone'),
+    t('Fax'),
+  );
   $export['asc_people'] = $view;
 
   return $export;

@@ -13,9 +13,9 @@ function asc_people_taxonomy_default_vocabularies() {
       'name' => 'Appointments',
       'machine_name' => 'people_terms_1',
       'description' => 'University Appointments',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '-1',
+      'weight' => -1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -36,9 +36,9 @@ function asc_people_taxonomy_default_vocabularies() {
       'name' => 'Research Interests',
       'machine_name' => 'people_terms_2',
       'description' => 'Research Interests',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -59,9 +59,9 @@ function asc_people_taxonomy_default_vocabularies() {
       'name' => 'Campus Location',
       'machine_name' => 'people_terms_3',
       'description' => 'Additional vocabulary for people.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '1',
+      'weight' => 1,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
