@@ -31,7 +31,7 @@ function asc_people_field_group_info() {
     'format_settings' => array(
       'label' => '',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => ' group-asc-people-description field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'open',
