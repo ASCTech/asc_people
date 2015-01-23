@@ -22,6 +22,12 @@ function asc_people_default_fe_block_settings() {
     'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
       'q7' => array(
         'region' => '',
         'status' => 0,
@@ -43,6 +49,12 @@ function asc_people_default_fe_block_settings() {
     'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
       'q7' => array(
         'region' => '',
         'status' => 0,
@@ -64,6 +76,12 @@ function asc_people_default_fe_block_settings() {
     'pages' => 'directory*',
     'roles' => array(),
     'themes' => array(
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
       'q7' => array(
         'region' => '',
         'status' => 0,
@@ -85,6 +103,12 @@ function asc_people_default_fe_block_settings() {
     'pages' => 'people/*',
     'roles' => array(),
     'themes' => array(
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
       'q7' => array(
         'region' => 'sidebar',
         'status' => 1,
@@ -106,11 +130,17 @@ function asc_people_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'q7' => array(
+      'alpha' => array(
         'region' => '',
         'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
+      'q7' => array(
+        'region' => 'postscript_first',
+        'status' => 1,
         'theme' => 'q7',
-        'weight' => -36,
+        'weight' => -37,
       ),
     ),
     'title' => '',
@@ -127,11 +157,17 @@ function asc_people_default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
+      'alpha' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'alpha',
+        'weight' => 0,
+      ),
       'q7' => array(
-        'region' => 'postscript_first',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'q7',
-        'weight' => -16,
+        'weight' => -36,
       ),
     ),
     'title' => '',

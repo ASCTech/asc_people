@@ -92,14 +92,17 @@ function asc_people_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'front_rotor_full_width' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '9',
         ),
       ),
       'display' => array(),

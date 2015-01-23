@@ -65,7 +65,7 @@ function asc_people_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 8,
     ),
   );
 
@@ -112,7 +112,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 18,
     ),
   );
 
@@ -159,7 +159,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 15,
+      'weight' => 22,
     ),
   );
 
@@ -203,7 +203,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 8,
+      'weight' => 12,
     ),
   );
 
@@ -248,7 +248,7 @@ function asc_people_field_default_field_instances() {
         'size' => 15,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 14,
     ),
   );
 
@@ -340,7 +340,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -385,7 +385,7 @@ function asc_people_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -430,7 +430,7 @@ function asc_people_field_default_field_instances() {
         'size' => 14,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 13,
     ),
   );
 
@@ -473,7 +473,77 @@ function asc_people_field_default_field_instances() {
       'module' => 'opic',
       'settings' => array(),
       'type' => 'opic_text',
-      'weight' => 3,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-asc_people-field_asc_people_picture_overrid'
+  $field_instances['node-asc_people-field_asc_people_picture_overrid'] = array(
+    'bundle' => 'asc_people',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_asc_people_picture_overrid',
+    'label' => 'asc_people_picture_override',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '300x419',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+          'vimeo' => 0,
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+          'youtube' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 6,
     ),
   );
 
@@ -520,7 +590,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 11,
     ),
   );
 
@@ -578,7 +648,7 @@ function asc_people_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 17,
     ),
   );
 
@@ -622,7 +692,7 @@ function asc_people_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -671,7 +741,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 19,
     ),
   );
 
@@ -769,7 +839,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -818,7 +888,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 18,
+      'weight' => 25,
     ),
   );
 
@@ -867,7 +937,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
@@ -916,7 +986,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 15,
+      'weight' => 21,
     ),
   );
 
@@ -965,7 +1035,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 15,
     ),
   );
 
@@ -1013,7 +1083,7 @@ function asc_people_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 17,
+      'weight' => 24,
     ),
   );
 
@@ -1057,7 +1127,7 @@ function asc_people_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -1099,7 +1169,7 @@ function asc_people_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 14,
+      'weight' => 20,
     ),
   );
 
@@ -1143,7 +1213,7 @@ function asc_people_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 16,
+      'weight' => 23,
     ),
   );
 
@@ -1175,6 +1245,7 @@ function asc_people_field_default_field_instances() {
   t('Use Phone Number from KMData');
   t('Use Title from KMData');
   t('Website Link');
+  t('asc_people_picture_override');
   t('kmdata_person_id');
 
   return $field_instances;

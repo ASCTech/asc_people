@@ -207,8 +207,32 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['field'] = 'field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_picture']['type'] = 'opic_p100';
+  /* Field: Content: asc_people_picture_override */
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['id'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['table'] = 'field_data_field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['field'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['settings'] = array(
+    'image_style' => '100px_portrait',
+    'image_link' => '',
+  );
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '5';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_asc_people_picture]';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '<p>[field_asc_people_picture_overrid]</p>';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: First Nam (hidden) */
   $handler->display->display_options['fields']['field_asc_people_first_name']['id'] = 'field_asc_people_first_name';
   $handler->display->display_options['fields']['field_asc_people_first_name']['table'] = 'field_data_field_asc_people_first_name';
@@ -425,8 +449,32 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['field'] = 'field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_picture']['type'] = 'opic_p100';
+  /* Field: Content: asc_people_picture_override */
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['id'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['table'] = 'field_data_field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['field'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['settings'] = array(
+    'image_style' => '100px_portrait',
+    'image_link' => '',
+  );
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '6';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '<p>[field_asc_people_picture_overrid]</p>';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[field_asc_people_picture]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   /* Field: Content: First Name */
   $handler->display->display_options['fields']['field_asc_people_first_name']['id'] = 'field_asc_people_first_name';
   $handler->display->display_options['fields']['field_asc_people_first_name']['table'] = 'field_data_field_asc_people_first_name';
@@ -462,6 +510,10 @@ function asc_people_views_default_views() {
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -477,24 +529,26 @@ function asc_people_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'asc_people' => 'asc_people',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
+  $handler->display->display_options['filters']['promote']['group'] = 1;
   /* Filter criterion: Content: Picture (field_asc_people_picture) */
   $handler->display->display_options['filters']['field_asc_people_picture_opic']['id'] = 'field_asc_people_picture_opic';
   $handler->display->display_options['filters']['field_asc_people_picture_opic']['table'] = 'field_data_field_asc_people_picture';
   $handler->display->display_options['filters']['field_asc_people_picture_opic']['field'] = 'field_asc_people_picture_opic';
   $handler->display->display_options['filters']['field_asc_people_picture_opic']['operator'] = 'not empty';
   $handler->display->display_options['filters']['field_asc_people_picture_opic']['value'] = 'brutus.0';
-  /* Filter criterion: Content: Display on Front Page (field_opic_exists) */
-  $handler->display->display_options['filters']['field_opic_exists_value']['id'] = 'field_opic_exists_value';
-  $handler->display->display_options['filters']['field_opic_exists_value']['table'] = 'field_data_field_opic_exists';
-  $handler->display->display_options['filters']['field_opic_exists_value']['field'] = 'field_opic_exists_value';
-  $handler->display->display_options['filters']['field_opic_exists_value']['value'] = array(
-    1 => '1',
-  );
+  $handler->display->display_options['filters']['field_asc_people_picture_opic']['group'] = 2;
+  /* Filter criterion: Content: asc_people_picture_override (field_asc_people_picture_overrid:fid) */
+  $handler->display->display_options['filters']['field_asc_people_picture_overrid_fid']['id'] = 'field_asc_people_picture_overrid_fid';
+  $handler->display->display_options['filters']['field_asc_people_picture_overrid_fid']['table'] = 'field_data_field_asc_people_picture_overrid';
+  $handler->display->display_options['filters']['field_asc_people_picture_overrid_fid']['field'] = 'field_asc_people_picture_overrid_fid';
+  $handler->display->display_options['filters']['field_asc_people_picture_overrid_fid']['operator'] = 'not empty';
+  $handler->display->display_options['filters']['field_asc_people_picture_overrid_fid']['group'] = 2;
   $handler->display->display_options['block_description'] = 'People Feature Large';
 
   /* Display: Bio Sidebar */
@@ -521,6 +575,7 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_picture']['table'] = 'field_data_field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['field'] = 'field_asc_people_picture';
   $handler->display->display_options['fields']['field_asc_people_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_picture']['element_label_colon'] = FALSE;
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_asc_people_email']['id'] = 'field_asc_people_email';
@@ -555,6 +610,29 @@ function asc_people_views_default_views() {
   $handler->display->display_options['fields']['field_asc_people_website_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_asc_people_website_link']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_asc_people_website_link']['click_sort_column'] = 'url';
+  /* Field: Content: asc_people_picture_override */
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['id'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['table'] = 'field_data_field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['field'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['label'] = '';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_asc_people_picture_overrid']['settings'] = array(
+    'image_style' => '',
+    'image_link' => '',
+  );
+  /* Field: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'field_asc_people_picture_overrid';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '5';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[field_asc_people_picture]';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[field_asc_people_picture_overrid]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
